@@ -18,7 +18,5 @@ def player():
                 x0 += 1
             elif comando[i] == '3':
                 shoot[0] = x0*' '+' |'
-            else:
-                break
             sem.release()
             time.sleep(0.5)

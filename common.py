@@ -22,3 +22,6 @@ comando = ['']*100
 # Pontuação do jogo e recorde
 score = [0]
 hiScore = [0]
+
+# Comando para atirar
+shootComando = [5]

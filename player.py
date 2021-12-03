@@ -1,4 +1,4 @@
-from common import comando, posicaoPlayer, posicaoEnemies, line1, line2, line3, line4, line5, line6, block1, block2, block3, block4
+from common import comando, posicaoPlayer, posicaoEnemies, line1, line2, line3, line4, line5, line6, block1, block2, block3, block4, score
 import threading, time, msvcrt
 sem = threading.Semaphore()
 
@@ -33,6 +33,7 @@ def player():
                     time.sleep(0.5)
                     line3[0] = ' '
                     posicaoEnemies[10] = ' '
+                    score[0] += 100
                     time.sleep(0.5)
                 # Trajetória do tiro na coluna 2
                 if line1[0] == '  |' and block1[0] == ' ':
@@ -132,6 +133,7 @@ def player():
                     time.sleep(0.5)
                     line3[0] = ' '
                     posicaoEnemies[11] = ' '
+                    score[0] += 100
                 # Trajetória do tiro na coluna 7
                 if line1[0] == '       |':
                     line1[0] = ''
@@ -226,6 +228,7 @@ def player():
                     time.sleep(0.5)
                     line3[0] = ' '
                     posicaoEnemies[12] = ' '
+                    score[0] += 100
                 # Trajetória do tiro na coluna 11 ao colidir com o bloco
                 if line1[0] == '           |':
                     line1[0] = ''
@@ -320,6 +323,7 @@ def player():
                     time.sleep(0.5)
                     line3[0] = ' '
                     posicaoEnemies[13] = ' '
+                    score[0] += 100
                 # Trajetória do tiro na coluna 16 ao colidir com o bloco
                 if line1[0] == '                |':
                     line1[0] = ''
@@ -414,6 +418,7 @@ def player():
                     time.sleep(0.5)
                     line3[0] = ' '
                     posicaoEnemies[14] = ' '
+                    score[0] += 100
                 # Trajetória do tiro na coluna 21 ao colidir com o bloco
                 if line1[0] == '                     |':
                     line1[0] = ''

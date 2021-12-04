@@ -1,5 +1,5 @@
 import sys, time, threading
-from common import posicaoEnemies, line1, line2, line3, block2, block3, block4, shootComando
+from common import posicaoEnemies, posicaoPlayer, line1, line2, line3, block2, block3, block4, shootComando, sair
 from random import randint
 sem = threading.Semaphore()
 
@@ -30,6 +30,8 @@ def shoot():
         line1[0] = ' |'
         time.sleep(0.5)
         line1[0] = ' '
+        if posicaoPlayer[0] == '---' or posicaoPlayer[0] == ' ---':
+            sair[0] = True
     # Trajetória do tiro inimigo na coluna 6
     elif shootComando[0] == 2:
         line3[0] = '      |'
@@ -41,6 +43,8 @@ def shoot():
         line1[0] = '      |'
         time.sleep(0.5)
         line1[0] = ' '
+        if posicaoPlayer[0] == '    ---' or posicaoPlayer[0] == '     ---' or posicaoPlayer[0] == '      ---':
+            sair[0] = True
     # Trajetória do tiro inimigo na coluna 11
     elif shootComando[0] == 3 and block2[3] == ' ':
         line3[0] = '           |'
@@ -52,6 +56,8 @@ def shoot():
         line1[0] = '           |'
         time.sleep(0.5)
         line1[0] = ' '
+        if posicaoPlayer[0] == '         ---' or posicaoPlayer[0] == '          ---' or posicaoPlayer[0] == '           ---':
+            sair[0] = True
     elif shootComando[0] == 3:
         line3[0] = '           |'
         time.sleep(0.5)
@@ -67,6 +73,8 @@ def shoot():
         line1[0] = '                |'
         time.sleep(0.5)
         line1[0] = ' '
+        if posicaoPlayer[0] == '              ---' or posicaoPlayer[0] == '               ---' or posicaoPlayer[0] == '                ---':
+            sair[0] = True
     elif shootComando[0] == 4:
         line3[0] = '                |'
         time.sleep(0.5)
@@ -82,6 +90,8 @@ def shoot():
         line1[0] = '                     |'
         time.sleep(0.5)
         line1[0] = ' '
+        if posicaoPlayer[0] == '                   ---' or posicaoPlayer[0] == '                    ---' or posicaoPlayer[0] == '                     ---':
+            sair[0] = True
     elif shootComando[0] == 5:
         line3[0] = '                     |'
         time.sleep(0.5)

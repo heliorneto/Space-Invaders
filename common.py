@@ -25,3 +25,6 @@ hiScore = [0]
 
 # Comando para atirar
 shootComando = [5]
+
+# Comando para sair do jogo
+sair = [False]

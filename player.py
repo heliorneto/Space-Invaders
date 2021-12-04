@@ -11,7 +11,7 @@ def player():
             
             # Calcula a posição atual do jogador
             sem.acquire()
-            jogador = x*' '+'---\n'
+            jogador = x*' '+'---'
             posicaoPlayer[0] = jogador
 
             # Pega o comando do teclado e move a nave ou atira

@@ -1,4 +1,4 @@
-from common import comando, posicaoPlayer, posicaoEnemies, line1, line2, line3, line4, line5, line6, block1, block2, block3, block4, score
+from common import comando, posicaoPlayer, posicaoEnemies, line1, line2, line3, line4, line5, line6, block1, block2, block3, block4, score, sair
 import threading, time, msvcrt
 sem = threading.Semaphore()
 
@@ -8,7 +8,6 @@ def player():
     
     while True:
         for i in range(100):
-            
             # Calcula a posição atual do jogador
             sem.acquire()
             jogador = x*' '+'---'

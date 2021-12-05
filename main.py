@@ -12,5 +12,5 @@ tp.start()
 te.start()
 
 td.join()
-tp.join()
-te.join()
+
+print('Fim de jogo')

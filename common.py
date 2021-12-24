@@ -19,6 +19,9 @@ block4 = ['C', 'C', 'C', 'C']
 # Comando de jogo
 comando = ['']*100
 
+# Comando do menu
+menu = ['']*100
+
 # Pontuação do jogo e recorde
 score = [0]
 hiScore = [0]

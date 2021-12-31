@@ -1,4 +1,4 @@
-from common import sair, comando, pausar, resetar, menu, posicaoEnemies, posicaoPlayer, x, block1, block2, block3, block4, score, hiScore
+from common import sair, pausar, menu, posicaoEnemies, posicaoPlayer, x, block1, block2, block3, block4, score, hiScore
 import threading, msvcrt
 sem = threading.Semaphore()
 

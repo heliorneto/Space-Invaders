@@ -30,5 +30,4 @@ shootComando = [5]
 sair = [False]
 
 # Comando para Pausar
-
-resetar = [False]
+pausar = [False]

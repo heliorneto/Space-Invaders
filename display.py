@@ -1,4 +1,4 @@
-from common import posicaoEnemies, posicaoPlayer, line1, line2, line3, line4, line5, line6, block1, block2, block3, block4, score, hiScore, sair
+from common import posicaoEnemies, posicaoPlayer, line1, line2, line3, line4, line5, line6, block1, block2, block3, block4, score, hiScore, sair, resetar, comando
 import os, time, threading
 sem = threading.Semaphore()
 
@@ -12,4 +12,6 @@ def display():
         print(screen)
         sem.release()
         time.sleep(0.1)
+        while resetar[0] == True:
+            time.sleep(5)
         os.system('cls')

@@ -1,5 +1,5 @@
 import sys, time, threading
-from common import posicaoEnemies, posicaoPlayer, line1, line2, line3, block2, block3, block4, shootComando, sair
+from common import posicaoEnemies, posicaoPlayer, line1, line2, line3, block2, block3, block4, shootComando, sair, resetar
 from random import randint
 sem = threading.Semaphore()
 
@@ -8,6 +8,8 @@ def enemies():
     enemies = 'B'
 
     while True:
+        while resetar[0] == True:
+            time.sleep(2)
         for i in range(15):
             # Animação para gerar os inimigos na tela
             sem.acquire()

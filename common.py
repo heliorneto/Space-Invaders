@@ -28,3 +28,6 @@ shootComando = [5]
 
 # Comando para sair do jogo
 sair = [False]
+
+# Comando para Pausar
+pausar = [False]

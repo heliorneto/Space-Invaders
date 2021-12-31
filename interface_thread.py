@@ -1,5 +1,5 @@
-from common import sair, comando, pausar
-import threading
+from common import sair, comando, pausar, resetar, menu
+import threading, msvcrt
 sem = threading.Semaphore()
 
 def interface_thread():
@@ -7,9 +7,12 @@ def interface_thread():
         cont = 0
         for i in range(100):
             sem.acquire()
-            if comando[i] == 'E':
+            menu[i] = msvcrt.getch().decode("utf-8")
+            if menu[i] == 'E':
                 sair[0] = True
-            if comando[i] == 'P' and cont%2 == 0:
+            if menu[i] == 'R':
+                resetar[0] = True
+            if menu[i] == 'P' and cont%2 == 0:
                 pausar[0] = True
                 cont+=1
             elif comando[i] == 'P' and cont%2 == 1:

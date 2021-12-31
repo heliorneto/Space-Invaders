@@ -1,27 +1,25 @@
-from common import comando, posicaoPlayer, posicaoEnemies, line1, line2, line3, line4, line5, line6, block1, block2, block3, block4, score, pausar
+from common import comando, posicaoPlayer, posicaoEnemies, line1, line2, line3, line4, line5, line6, block1, block2, block3, block4, score, pausar, x
 import threading, time, msvcrt
 sem = threading.Semaphore()
 
 def player():
-    # Posição da nave
-    x = 1
     
     while True:
         for i in range(100):
             # Calcula a posição atual do jogador
             sem.acquire()
-            jogador = x*' '+'---'
+            jogador = x[0]*' '+'---'
             posicaoPlayer[0] = jogador
 
             # Pega o comando do teclado e move a nave ou atira
             comando[i] = msvcrt.getch().decode("utf-8")
             if pausar[0] == False:
                 if comando[i] == '1':
-                    x -= 1
+                    x[0] -= 1
                 elif comando[i] == '2':
-                    x += 1
+                    x[0] += 1
                 elif comando[i] == '3':
-                    line1[0] = x*' '+' |'
+                    line1[0] = x[0]*' '+' |'
                     time.sleep(0.5)
                     # Trajetória do tiro na coluna 1
                     if line1[0] == ' |':

@@ -2,6 +2,9 @@
 posicaoEnemies = [' ']*20
 posicaoPlayer = [' ']
 
+# Posição da nave
+x = [1]
+
 # Linhas do tabuleiro
 line1 = ['']
 line2 = [' ', '  ', '  ', '  ', '  ']
@@ -19,6 +22,9 @@ block4 = ['C', 'C', 'C', 'C']
 # Comando de jogo
 comando = ['']*100
 
+# Comando de jogo
+menu = ['']*100
+
 # Pontuação do jogo e recorde
 score = [0]
 hiScore = [0]
@@ -31,3 +37,6 @@ sair = [False]
 
 # Comando para Pausar
 pausar = [False]
+
+# Comando para Resetar
+resetar = [False]

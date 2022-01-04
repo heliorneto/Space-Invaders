@@ -14,11 +14,9 @@ def interface_thread():
         if menu[0] == 'P' and cont%2 == 0:
             pausar[0] = True
             cont+=1
-        elif menu[0] == 'P' and cont%2 == 1:
+        elif menu[0] == 'p' and cont%2 == 1:
             pausar[0] = False
             cont+=1
-        else:
-            comando[0] = menu[0]
         sem.release()
 
 def funcResetar():

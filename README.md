@@ -10,7 +10,11 @@ Trata-se de uma versão do jogo Space Invaders que tem como objetivo impedir uma
 - Controle da trajetória dos tiros;
 - Movimento dos invasores inimigos;
 - Trajetória dos tiros do inimigo;
-- Atualização da interface gráfica em tempo real.
+- Atualização da interface gráfica em tempo real;
+- Pausar/Retomar o jogo;
+- Sair do jogo;
+- Resetar o jogo;
+- Gerar um arquivo com a pontuação e tempo de jogo.
 
 ### **Ano de implementação**
 
@@ -28,6 +32,8 @@ Hélio Neto.
         -> enemies.py
         -> main.py
         -> player.py
+        -> interface_thread.py
+        -> logger_thread.py
 
 **-> Space-Invaders**
 
@@ -53,6 +59,14 @@ Hélio Neto.
 
   - Arquivo contendo a Thread responsável por controlar a movimentação da nave de defesa assim como a trajetória dos seus disparos. A movimentação da nave e os seus disparos são dados via teclado com a interação do usuário em tempo real. 
 
+  **-> interface_thread.py**
+
+  - Arquivo contendo a Thread responsável por gerenciar o menu de opções do jogo, assim como ler do teclado o comando dado pelo usuário. As ações disponíveis no menu de opções são disparadas via teclado com a interação do usuário em tempo real.
+
+  **-> logger_thread.py**
+
+  - Arquivo contendo a Thread responsável por gerar o arquivo .txt e escrever tanto o score quanto o tempo jogado (que também é calculado nessa thread). O arquivo .txt é atualizado a cada 10 segundos com as novas informações de score e tempo jogado.
+
 ## 📲 Como Rodar
 
 Para rodar o jogo basta digitar o comando abaixo no terminal:
@@ -63,7 +77,7 @@ Obs: Durante a elaboração do projeto foi utilizada biblioteca msvcrt para pega
 
 ## 🎮 Como Jogar
 
-Após digitar o comando para rodar o jogo no seu terminal, a interface gráfica será gerado com todos os elementos gráficos como as naves inimigas, e a nave de defesa. Para controlar a nave de defesa utilizamos as teclas '1' e '2' do teclado, sendo a tecla '1' utilizada para mover a nave para a esquerda e a tecla '2' para mover a nave para a esquerda. Para efetuar um disparo com a nave de defesa basta se posicionar no local desejado e apertar a tecla '3' no seu teclado. Tal ação efetuará um disparo no local indicado e caso acerte um inimigo aumentará a pontuação atual em 100 pontos, caso acerte um bloco de defesa o mesmo será destruído e caso não acerte nenhum dos alvos o disparo simplemente irá desaparecer no limite superior da tela. 
+Após digitar o comando para rodar o jogo no seu terminal, a interface gráfica será gerado com todos os elementos gráficos como as naves inimigas, e a nave de defesa. Para controlar a nave de defesa utilizamos as teclas '1' e '2' do teclado, sendo a tecla '1' utilizada para mover a nave para a esquerda e a tecla '2' para mover a nave para a direita. Para efetuar um disparo com a nave de defesa basta se posicionar no local desejado e apertar a tecla '3' no seu teclado. Tal ação efetuará um disparo no local indicado e caso acerte um inimigo aumentará a pontuação atual em 100 pontos, caso acerte um bloco de defesa o mesmo será destruído e caso não acerte nenhum dos alvos o disparo simplemente irá desaparecer no limite superior da tela. Em baixo do ícone do jogador existe um menu de opções sinalizando o que o usuário pode fazer durante a partida. Caso o usuário precione a tecla 'P' após o jogo ter começado, a partida será pausada e para retomar o jogo basta pressionar a tecla 'p'. Caso o usuário pressione a tecla 'R', o jogo será resetado e o score voltará a zerto. Por último, caso o jogador pressione a tecla 'E', o jogo será finalizado.
 
 ## 🔧 Ferramentas Utilizadas
 

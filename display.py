@@ -1,4 +1,4 @@
-from common import posicaoEnemies, posicaoPlayer, line1, line2, line3, line4, line5, line6, block1, block2, block3, block4, score, hiScore, sair, pausar, resetar, x
+from common import posicaoEnemies, posicaoPlayer, line1, line2, line3, line4, line5, line6, block1, block2, block3, block4, score, hiScore, sair, pausar
 import os, time, threading
 sem = threading.Semaphore()
 

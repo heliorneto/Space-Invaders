@@ -1,5 +1,5 @@
 from common import sair, pausar, menu, posicaoEnemies, posicaoPlayer, x, block1, block2, block3, block4, score, hiScore, comando
-import threading, msvcrt
+import threading
 sem = threading.Semaphore()
 
 def interface_thread():

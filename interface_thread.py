@@ -1,24 +1,23 @@
-from common import sair, pausar, menu, posicaoEnemies, posicaoPlayer, x, block1, block2, block3, block4, score, hiScore
+from common import sair, pausar, menu, posicaoEnemies, posicaoPlayer, x, block1, block2, block3, block4, score, hiScore, comando
 import threading, msvcrt
 sem = threading.Semaphore()
 
 def interface_thread():
+    cont = 0
     while True:
-        cont = 0
-        for i in range(100):
-            sem.acquire()
-            menu[i] = msvcrt.getch().decode("utf-8")
-            if menu[i] == 'E':
-                sair[0] = True
-            if menu[i] == 'R':
-                funcResetar()
-            if menu[i] == 'P' and cont%2 == 0:
-                pausar[0] = True
-                cont+=1
-            elif menu[i] == 'P' and cont%2 == 1:
-                pausar[0] = False
-                cont+=1
-            sem.release()
+        sem.acquire()
+        menu[0] = comando[0]
+        if menu[0] == 'E':
+            sair[0] = True
+        if menu[0] == 'R':
+            funcResetar()
+        if menu[0] == 'P' and cont%2 == 0:
+            pausar[0] = True
+            cont+=1
+        elif menu[0] == 'p' and cont%2 == 1:
+            pausar[0] = False
+            cont+=1
+        sem.release()
 
 def funcResetar():
     for i in range(15):

@@ -10,7 +10,6 @@ def logger_thread():
             arquivo = open(nome_arquivo, 'r+')
         except FileNotFoundError:
             arquivo = open(nome_arquivo, 'w+')
-        #faca o que quiser
         time.sleep(10)
         final = time.time()
         tempo = final-inicial

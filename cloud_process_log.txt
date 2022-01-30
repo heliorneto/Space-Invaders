@@ -1,5 +1,5 @@
 
- Tempo de início: 12
- Pontuação: 25
- Tempo que a nave foi destruída: 3
- Tempo que acabou o jogo: 45
+ Tempo de início: 1643511167
+ Pontuação: 100
+ Tempo que a nave foi destruída: 1
+ Tempo que acabou o jogo: 1

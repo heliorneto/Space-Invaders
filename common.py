@@ -40,3 +40,8 @@ pausar = [False]
 
 # Comando para Resetar
 resetar = [False]
+
+# Variáveis para receber no cloud_process
+inicio_jogo = [1]
+score_cloud_process = [1]
+tempo_fim_jogo = [1]

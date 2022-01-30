@@ -15,6 +15,7 @@ Trata-se de uma versão do jogo Space Invaders que tem como objetivo impedir uma
 - Sair do jogo;
 - Resetar o jogo;
 - Gerar um arquivo com a pontuação e tempo de jogo.
+- Gerar um arquivo contendo o tempo de início, pontuação, tempo em que a nave foi destruída e tempo de fim de jogo.
 
 ### **Ano de implementação**
 
@@ -34,6 +35,7 @@ Hélio Neto.
         -> player.py
         -> interface_thread.py
         -> logger_thread.py
+        -> cloud_process.py
 
 **-> Space-Invaders**
 
@@ -67,6 +69,10 @@ Hélio Neto.
 
   - Arquivo contendo a Thread responsável por gerar o arquivo .txt e escrever tanto o score quanto o tempo jogado (que também é calculado nessa thread). O arquivo .txt é atualizado a cada 10 segundos com as novas informações de score e tempo jogado.
 
+  **-> cloud_process.py**
+
+  - Arquivo contendo o processo responsável por gerar o arquivo .txt e escrever o tempo de início, pontuação, tempo em que a nave foi destruída e tempo de fim de jogo (que vem de outro processo). O arquivo .txt é atualizado a cada 5 segundos com as novas informações de score e o processo recebe dados do processo principal via socket.
+
 ## 📲 Como Rodar
 
 Para rodar o jogo basta digitar o comando abaixo no terminal:
@@ -87,6 +93,8 @@ Após digitar o comando para rodar o jogo no seu terminal, a interface gráfica 
 - os -> Biblioteca Python usada no projeto para limpar o terminal e atualizar a interface gráfica da aplicação.
 - random -> Biblioteca Python usada para gerar os disparos do inimigo de forma aleatória.
 - msvcrt -> Biblioteca Python usada para pegar os comandos digitados pelo usuário no teclado em tempo real.
+- socket -> API responsável por tratar a comunicação entre diferentes processos através da criação de um cliente e servidor. Utilizada neste projeto para passar os dados do processo principal para o cloud_process.
+- multiprocessing -> Biblioteca semelhante a biblioteca threading que cria um novo processo ao invés de uma threading. Foi usada para criar o cloud_process.
 
 ---
 
